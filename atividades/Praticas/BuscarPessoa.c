@@ -4,7 +4,6 @@
 #include <time.h>
 
 #define SIZE 10
-#define DELTA (75 - 11 + 1) + 11
 
 struct Pessoa {
     char nome[55];
