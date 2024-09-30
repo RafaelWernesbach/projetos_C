@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct fezes{
+typedef struct cel{
     
     int cont;
-    struct fezes* prox;
+    struct cel* prox;
     
-}fezes;
+}cel;
 
-typedef struct fezes* Lista;
+typedef struct cel* Lista;
 
 Lista* crialista(){
     
@@ -24,13 +24,13 @@ Lista* crialista(){
 
 int inserelistafim(Lista* lista, int val){
     if(lista == NULL){return 0;}
-    fezes* aux = (fezes*)malloc(sizeof(fezes));
+    cel* aux = (cel*)malloc(sizeof(cel));
     if(aux==NULL){return 0;}
     aux->cont = val;
     aux->prox = NULL;
     if((*lista)==NULL){ *lista = aux;}
     else{
-        fezes *temp;
+        cel *temp;
         temp = *lista;
         while(temp->prox != NULL){
             temp = temp->prox;
